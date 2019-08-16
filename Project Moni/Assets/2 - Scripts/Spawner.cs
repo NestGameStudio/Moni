@@ -14,6 +14,9 @@ public class Spawner : MonoBehaviour
     /// - Todos os itens irão realizar uma parábola para dentro do carrinho, a direção na qual o item é jogado 
     /// depende de qual lado o item foi spawnado, enquanto a curva da parábola depende da altura no qual o item foi colocado
 
+    // Parent das mercadorias spawnadas
+    public GameObject MerchParent;
+
     [Header ("Spawn Itens")]
 
     // Referencia a uma lista de Mercadoria que por sua vez está referenciando o Prefab do modelo
@@ -29,9 +32,6 @@ public class Spawner : MonoBehaviour
     public float MinLimitSpawnFrequency = 1f;
 
 
-
-
-
     // Start is called before the first frame update
     void Start() {
         StartCoroutine(SpawnerThread());
@@ -42,8 +42,17 @@ public class Spawner : MonoBehaviour
     // Se no futuro tiver que fazer algum randomizador, fazer isso aqui
     private void SpawnMerch() {
 
-        //float 
+        Vector3 initialPosition = new Vector3(0, 6, 0);
 
+        // choose between right or left
+        if (Random.Range(0, 2) == 0)
+            initialPosition.x = 5;  // Right
+        else
+            initialPosition.x = -5; // Left
+
+        GameObject randomMerch = Mercadorias[Random.Range(0, Mercadorias.Count -1)].MercadoriaPrefab;
+
+        Instantiate(randomMerch,initialPosition,randomMerch.transform.rotation, randomMerch.transform);
     }
 
     // It's not a thread (yet)

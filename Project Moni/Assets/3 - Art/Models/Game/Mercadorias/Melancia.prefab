@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 4792961489217549908}
   - component: {fileID: 8243158812781931}
   - component: {fileID: 2581610978273529376}
+  - component: {fileID: -6047056847261709878}
   m_Layer: 0
   m_Name: Melancia
   m_TagString: Untagged
@@ -105,6 +106,27 @@ EdgeCollider2D:
   - {x: -0.016622722, y: -0.45959854}
   - {x: 0.25540018, y: -0.5353984}
   - {x: 0.25, y: 0.53}
+--- !u!50 &-6047056847261709878
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803381304900124030}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7714548486895453421
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,6 +192,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2218550ded00c2f4eada2dac158dfcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MerchParent: {fileID: 0}
   Mercadorias:
   - {fileID: 11400000, guid: 52cf86e660b911842bebadde40b3ce40, type: 2}
   - {fileID: 11400000, guid: 6af6bd49c2bf20c4bb1e9dd267be30f0, type: 2}
@@ -52,3 +53,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b544680413f57744e828492453e0d1e7, type: 2}
   - {fileID: 11400000, guid: 54193df991c930f4bb6309f05366073a, type: 2}
   - {fileID: 11400000, guid: 60d4b887ef8f27749a833a64ac35ea35, type: 2}
+  InitialSpawnFrequency: 5
+  SpawnMultiplierOverTime: 1.5
+  MinLimitSpawnFrequency: 1
