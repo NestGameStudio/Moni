@@ -14,13 +14,18 @@ public class Spawner : MonoBehaviour
     /// - Todos os itens irão realizar uma parábola para dentro do carrinho, a direção na qual o item é jogado 
     /// depende de qual lado o item foi spawnado, enquanto a curva da parábola depende da altura no qual o item foi colocado
 
-    // Parent das mercadorias spawnadas
-    public GameObject MerchParent;
+    [Header("Spawn Itens")]
 
-    [Header ("Spawn Itens")]
+    // Game Object which will be the merc parent
+    public GameObject MercParent;
 
     // Referencia a uma lista de Mercadoria que por sua vez está referenciando o Prefab do modelo
     public List<Mercadoria> Mercadorias = new List<Mercadoria>();
+
+    [Header("Spawn Location")]
+
+    public float MinY = 3;
+    public float MaxY = 6;
 
     [Header("Spawn Time Configuration")]
 
@@ -50,9 +55,37 @@ public class Spawner : MonoBehaviour
         else
             initialPosition.x = -5; // Left
 
+        // choose a variable height to spawn
+        initialPosition.y = Random.Range(MinY, MaxY);
+
         GameObject randomMerch = Mercadorias[Random.Range(0, Mercadorias.Count -1)].MercadoriaPrefab;
 
-        Instantiate(randomMerch,initialPosition,randomMerch.transform.rotation, randomMerch.transform);
+        GameObject merc;
+
+        // Check if there's any parent for the merc
+        if (MercParent)
+            merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, MercParent.transform);
+        else
+            merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, randomMerch.transform);
+
+        ThrowMercInCart(merc);
+    }
+
+    // Responsible for the function that throws the merc in the cart
+    private void ThrowMercInCart(GameObject merc) {
+
+        // parabola que age em funcao da alturar do objeto e da direção jogada
+        // a*x^2 + b*x + c -> https://vilbeyli.github.io/Projectile-Motion-Tutorial-for-Arrows-and-Missiles-in-Unity3D/
+
+        // fancy implementation of the projetile motion /\
+
+        // sloppy implementation of the projetile motion \/
+
+        if (merc.transform.position.x == 5)     // Spawned on the Right
+            merc.GetComponent<Rigidbody2D>().AddForce(Vector3.left * 300);
+        else if (merc.transform.position.x == -5)     // Spawned on the Left
+            merc.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 300);
+
     }
 
     // It's not a thread (yet)

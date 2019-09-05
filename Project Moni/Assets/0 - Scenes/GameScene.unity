@@ -919,6 +919,16 @@ PrefabInstance:
       propertyPath: MerchParent
       value: 
       objectReference: {fileID: 216805774}
+    - target: {fileID: 7485040207562616087, guid: 32f8c6af02d9d394892514b482552ae7,
+        type: 3}
+      propertyPath: MinY
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485040207562616087, guid: 32f8c6af02d9d394892514b482552ae7,
+        type: 3}
+      propertyPath: MercParent
+      value: 
+      objectReference: {fileID: 216805774}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32f8c6af02d9d394892514b482552ae7, type: 3}
 --- !u!1001 &8397991753523671129
