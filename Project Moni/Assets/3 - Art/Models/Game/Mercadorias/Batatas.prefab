@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8768876680474592935}
   - component: {fileID: 7808164429493447053}
   - component: {fileID: -5707644279073135204}
+  - component: {fileID: 1060831498006173465}
+  - component: {fileID: 7429307652935619361}
   m_Layer: 0
   m_Name: Batatas
   m_TagString: Untagged
@@ -93,6 +95,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1060831498006173465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014521117947594936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mercadoria: {fileID: 11400000, guid: 52cf86e660b911842bebadde40b3ce40, type: 2}
+--- !u!114 &7429307652935619361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014521117947594936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStackSize: 6
 --- !u!1 &4487969617978614548
 GameObject:
   m_ObjectHideFlags: 0

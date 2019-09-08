@@ -27,9 +27,8 @@ public class DragAndDrop : MonoBehaviour
         dragging = false;
     }
 
-    void Update()
-    {
-        if (dragging){
+    void Update() {
+        if (dragging) {
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
@@ -43,6 +42,6 @@ public class DragAndDrop : MonoBehaviour
 
             rb.freezeRotation = false;
         }
-
     }
+
 }

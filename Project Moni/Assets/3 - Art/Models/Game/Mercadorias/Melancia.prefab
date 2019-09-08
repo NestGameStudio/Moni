@@ -45,6 +45,8 @@ GameObject:
   - component: {fileID: 1791928274911399591}
   - component: {fileID: -6047056847261709878}
   - component: {fileID: -7858347085830405155}
+  - component: {fileID: -5302455935075330606}
+  - component: {fileID: 6444439334964799502}
   m_Layer: 0
   m_Name: Melancia
   m_TagString: Untagged
@@ -148,6 +150,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5302455935075330606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803381304900124030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mercadoria: {fileID: 11400000, guid: 54193df991c930f4bb6309f05366073a, type: 2}
+--- !u!114 &6444439334964799502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803381304900124030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStackSize: 6
 --- !u!1 &7714548486895453421
 GameObject:
   m_ObjectHideFlags: 0
