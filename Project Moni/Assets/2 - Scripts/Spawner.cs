@@ -36,9 +36,6 @@ public class Spawner : MonoBehaviour
     [Tooltip("menor intervalo possivel no qual o objeto pode fazer respawn")]
     public float MinLimitSpawnFrequency = 1f;
 
-    // Counter to the number of spawned itens
-    private int lastSpawnedItemCounter = 0;
-
     // Start is called before the first frame update
     void Start() {
         StartCoroutine(SpawnerThread());
@@ -69,9 +66,6 @@ public class Spawner : MonoBehaviour
             merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, MercParent.transform);
         else
             merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, randomMerch.transform);
-
-        // The GameObject 
-        lastSpawnedItemCounter++;
 
         ThrowMercInCart(merc);
 
