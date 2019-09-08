@@ -12,11 +12,11 @@ public class MercadoriaStack : MonoBehaviour
     // Do the combination
     public void CombinateItens(GameObject merch) {
 
-        int StackSize = this.gameObject.GetComponent<Mercadoria>().StackSize;
-        int StackSizeCollider = merch.GetComponent<Mercadoria>().StackSize;
+        int StackSize = this.gameObject.GetComponent<MercadoriaInstance>().Mercadoria.StackSize;
+        int StackSizeCollider = merch.GetComponent<MercadoriaInstance>().Mercadoria.StackSize;
 
         if ((StackSize < MaxStackSize) && (StackSizeCollider < MaxStackSize)) {
-            this.gameObject.GetComponent<Mercadoria>().StackSize++;
+            this.gameObject.GetComponent<MercadoriaInstance>().Mercadoria.StackSize++;
             this.transform.localScale += this.transform.localScale * 0.25f;
             Destroy(merch);
         }
@@ -26,11 +26,13 @@ public class MercadoriaStack : MonoBehaviour
     // Check the collision
     void OnCollisionEnter2D(Collision2D collision) {
 
-        GameObject colliderPrefab = collision.gameObject.GetComponent<Mercadoria>().MercadoriaPrefab;
 
-        if (this.gameObject.GetComponent<Mercadoria>().MercadoriaPrefab == colliderPrefab) {
+        if (collision.gameObject.GetComponent<MercadoriaInstance>()) {
+            GameObject colliderPrefab = collision.gameObject.GetComponent<MercadoriaInstance>().Mercadoria.MercadoriaPrefab;
 
-            CombinateItens(collision.gameObject);
+            if (this.gameObject.GetComponent<MercadoriaInstance>().Mercadoria.MercadoriaPrefab == colliderPrefab) {
+                CombinateItens(collision.gameObject);
+            }
         }
 
     }

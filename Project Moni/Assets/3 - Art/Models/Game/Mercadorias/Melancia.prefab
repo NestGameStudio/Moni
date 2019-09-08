@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mercadoria: {fileID: 0}
+  Mercadoria: {fileID: 11400000, guid: 54193df991c930f4bb6309f05366073a, type: 2}
 --- !u!114 &6444439334964799502
 MonoBehaviour:
   m_ObjectHideFlags: 0
