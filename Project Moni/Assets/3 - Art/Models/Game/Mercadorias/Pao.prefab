@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 655391959239682272}
   - component: {fileID: -7942159709426273497}
   - component: {fileID: 1155364632906942706}
+  - component: {fileID: 1598393989411064674}
+  - component: {fileID: 6391010220136338382}
   m_Layer: 0
   m_Name: Pao
   m_TagString: Untagged
@@ -83,6 +85,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1598393989411064674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602163998492730436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mercadoria: {fileID: 0}
+--- !u!114 &6391010220136338382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602163998492730436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStackSize: 6
 --- !u!1 &6402335791399530474
 GameObject:
   m_ObjectHideFlags: 0

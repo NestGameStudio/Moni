@@ -122,6 +122,8 @@ GameObject:
   - component: {fileID: 5588904964721557949}
   - component: {fileID: 3929498701758149301}
   - component: {fileID: -1304597827706073827}
+  - component: {fileID: -1631223335310094097}
+  - component: {fileID: 2351412247091581175}
   m_Layer: 0
   m_Name: Farinha
   m_TagString: Untagged
@@ -203,6 +205,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1631223335310094097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687330849241440721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mercadoria: {fileID: 0}
+--- !u!114 &2351412247091581175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5687330849241440721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStackSize: 6
 --- !u!1001 &2104325917476126090
 PrefabInstance:
   m_ObjectHideFlags: 0

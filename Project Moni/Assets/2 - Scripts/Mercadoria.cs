@@ -8,4 +8,6 @@ public class Mercadoria : ScriptableObject {
     public GameObject MercadoriaPrefab;
     public int Value;
 
+    public int StackSize = 1;
+
 }

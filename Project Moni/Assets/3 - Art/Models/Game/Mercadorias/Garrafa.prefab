@@ -169,6 +169,8 @@ GameObject:
   - component: {fileID: 7618709724027612093}
   - component: {fileID: 1720737445725149241}
   - component: {fileID: 2443949202134408046}
+  - component: {fileID: -1660763857192420771}
+  - component: {fileID: -2306063191656708225}
   m_Layer: 0
   m_Name: Garrafa
   m_TagString: Untagged
@@ -266,6 +268,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1660763857192420771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101007489251823299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mercadoria: {fileID: 0}
+--- !u!114 &-2306063191656708225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101007489251823299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStackSize: 6
 --- !u!1 &6724913169941745636
 GameObject:
   m_ObjectHideFlags: 0
