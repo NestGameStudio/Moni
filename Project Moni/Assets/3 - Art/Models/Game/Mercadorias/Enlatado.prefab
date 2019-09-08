@@ -138,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 6427892651222035671}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5054031943464009451}
   m_Father: {fileID: 0}
@@ -168,7 +168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.65}
+  m_Size: {x: 0.37169352, y: 0.5898664}
   m_EdgeRadius: 0
 --- !u!50 &-2311122520557599911
 Rigidbody2D:
@@ -210,6 +210,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5054031943464009451}
     m_Modifications:
+    - target: {fileID: 5009046150863806826, guid: 2016fde1400fe364ca4ea58ed531ce07,
+        type: 3}
+      propertyPath: m_Name
+      value: Leite Condensado
+      objectReference: {fileID: 0}
     - target: {fileID: 8347682732130734969, guid: 2016fde1400fe364ca4ea58ed531ce07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,11 +284,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4.9477644
-      objectReference: {fileID: 0}
-    - target: {fileID: 5009046150863806826, guid: 2016fde1400fe364ca4ea58ed531ce07,
-        type: 3}
-      propertyPath: m_Name
-      value: Leite Condensado
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2016fde1400fe364ca4ea58ed531ce07, type: 3}
