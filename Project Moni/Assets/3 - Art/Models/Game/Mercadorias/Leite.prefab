@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 7278098839163400241}
   - component: {fileID: 9162409277838926163}
   - component: {fileID: -7143568539891969888}
+  - component: {fileID: -2832620950454600329}
   m_Layer: 0
   m_Name: Leite
   m_TagString: Untagged
@@ -154,10 +155,22 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-2832620950454600329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631319195850839371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8771771980003240666
 GameObject:
   m_ObjectHideFlags: 0
