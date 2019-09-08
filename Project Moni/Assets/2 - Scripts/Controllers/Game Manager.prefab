@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8397991752535684353}
   - component: {fileID: 8397991752535684352}
+  - component: {fileID: 6674480185564703609}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -43,3 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b72351ea444ee45b7ea96ef3b1ad05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6674480185564703609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397991752535684366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2218550ded00c2f4eada2dac158dfcc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MercParent: {fileID: 0}
+  Mercadorias:
+  - {fileID: 11400000, guid: 52cf86e660b911842bebadde40b3ce40, type: 2}
+  - {fileID: 11400000, guid: 6af6bd49c2bf20c4bb1e9dd267be30f0, type: 2}
+  - {fileID: 11400000, guid: 077da7ff1a26e9f478ae5f0ec12e5b62, type: 2}
+  - {fileID: 11400000, guid: 0ab95a86d6a3827458ae839152c8a6d2, type: 2}
+  - {fileID: 11400000, guid: 5e0efc19506b0e341ad80074efbfdc05, type: 2}
+  - {fileID: 11400000, guid: b544680413f57744e828492453e0d1e7, type: 2}
+  - {fileID: 11400000, guid: 54193df991c930f4bb6309f05366073a, type: 2}
+  - {fileID: 11400000, guid: 60d4b887ef8f27749a833a64ac35ea35, type: 2}
+  MinY: 3
+  MaxY: 6
+  InitialSpawnFrequency: 5
+  SpawnMultiplierOverTime: 1.5
+  MinLimitSpawnFrequency: 1

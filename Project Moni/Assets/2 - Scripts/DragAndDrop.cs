@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    // pode arrastar os itens restritamente dentro do carrinho
+    // Drag the itens
 
     private bool dragging = false;
     private float distance;
+
+    private Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = this.GetComponent<Rigidbody2D>();
+    }
 
     void OnMouseDown()
     {
@@ -22,13 +29,19 @@ public class DragAndDrop : MonoBehaviour
 
     void Update()
     {
-        if (dragging)
-        {
+        if (dragging){
+
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
 
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
+            rb.freezeRotation = true;
             rb.MovePosition(rayPoint);
+
+        } else {
+
+            rb.freezeRotation = false;
         }
+
     }
 }
