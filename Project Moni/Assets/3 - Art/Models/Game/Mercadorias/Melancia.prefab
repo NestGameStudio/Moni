@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792961489217549908}
   - component: {fileID: 8243158812781931}
-  - component: {fileID: 2581610978273529376}
+  - component: {fileID: 1791928274911399591}
   - component: {fileID: -6047056847261709878}
   - component: {fileID: -7858347085830405155}
   - component: {fileID: -5302455935075330606}
@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 4803381304900124030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2.4, y: 2.4, z: 2.4}
   m_Children:
   - {fileID: 8747867209135470354}
   m_Father: {fileID: 0}
@@ -85,8 +85,8 @@ CapsuleCollider2D:
   m_Offset: {x: 0.02, y: 0}
   m_Size: {x: 0.5224328, y: 1.033649}
   m_Direction: 0
---- !u!68 &2581610978273529376
-EdgeCollider2D:
+--- !u!60 &1791928274911399591
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -99,16 +99,24 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 0.22839978, y: 0.4832135}
-  - {x: -0.045599826, y: 0.38701814}
-  - {x: -0.19879931, y: 0.17920314}
-  - {x: -0.23321041, y: -0.0123604}
-  - {x: -0.1360259, y: -0.29748392}
-  - {x: 0.021177724, y: -0.43620527}
-  - {x: 0.2193998, y: -0.49221084}
-  - {x: 0.22839978, y: 0.47961447}
+    m_Paths:
+    - - {x: 0.21881166, y: 0.48412895}
+      - {x: -0.015471911, y: 0.4066755}
+      - {x: -0.17121556, y: 0.24203028}
+      - {x: -0.23175208, y: -0.018699316}
+      - {x: -0.16091926, y: -0.257322}
+      - {x: -0.006525218, y: -0.41528583}
+      - {x: 0.21954833, y: -0.4846306}
 --- !u!50 &-6047056847261709878
 Rigidbody2D:
   serializedVersion: 4
