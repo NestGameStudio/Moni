@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 2351412247091581175}
   m_Layer: 0
   m_Name: Farinha
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &-1631223335310094097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1001 &2104325917476126090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -238,6 +240,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8657397395998789376}
     m_Modifications:
+    - target: {fileID: 3735693943753004142, guid: ac61a51ce1c1d5e478574ae75f591a6c,
+        type: 3}
+      propertyPath: m_Name
+      value: Farinha
+      objectReference: {fileID: 0}
     - target: {fileID: 399835210951108221, guid: ac61a51ce1c1d5e478574ae75f591a6c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -307,11 +314,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 6.8759
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735693943753004142, guid: ac61a51ce1c1d5e478574ae75f591a6c,
-        type: 3}
-      propertyPath: m_Name
-      value: Farinha
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac61a51ce1c1d5e478574ae75f591a6c, type: 3}

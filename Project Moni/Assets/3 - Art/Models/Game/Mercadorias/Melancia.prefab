@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 6444439334964799502}
   m_Layer: 0
   m_Name: Melancia
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &-5302455935075330606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1 &7714548486895453421
 GameObject:
   m_ObjectHideFlags: 0
