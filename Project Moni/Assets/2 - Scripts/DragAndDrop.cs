@@ -6,7 +6,7 @@ public class DragAndDrop : MonoBehaviour
 {
     // Drag the itens
 
-    private bool dragging = false;
+    [HideInInspector] public bool Dragging = false;
     private float distance;
 
     private Rigidbody2D rb;
@@ -19,29 +19,29 @@ public class DragAndDrop : MonoBehaviour
     void OnMouseDown()
     {
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        dragging = true;
+        Dragging = true;
     }
 
     void OnMouseUp()
     {
-        dragging = false;
+        Dragging = false;
     }
 
-    void Update()
-    {
-        if (dragging){
+    void Update() {
+        if (Dragging) {
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 rayPoint = ray.GetPoint(distance);
 
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
             rb.freezeRotation = true;
+            rb.Sleep();
             rb.MovePosition(rayPoint);
 
         } else {
 
             rb.freezeRotation = false;
         }
-
     }
+
 }
