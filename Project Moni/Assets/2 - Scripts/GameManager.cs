@@ -7,13 +7,13 @@ public class GameManager : MonoBehaviour
 {
     private int ErrorCounter;
     [SerializeField] private int MaxErrorCounter;
-
+    [SerializeField] private EndGameManager EndGManager;
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
         if(ErrorCounter >= MaxErrorCounter)
         {
-            
+            EndGManager.EndGame();
         }
     }
     // Start is called before the first frame update
