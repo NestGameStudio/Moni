@@ -7,7 +7,10 @@ public class FloorDestroyObject : MonoBehaviour
     [SerializeField] private GameManager gm;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
-        gm.IncreaseErrorCounter();
+        if(collision.tag == "Mercadoria")
+        {
+            Destroy(collision.gameObject);
+            gm.IncreaseErrorCounter();
+        }
     }
 }
