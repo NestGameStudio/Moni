@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: -7739631577235328575}
   m_Layer: 0
   m_Name: Leite
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &-430800218092720646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1 &8771771980003240666
 GameObject:
   m_ObjectHideFlags: 0

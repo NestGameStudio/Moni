@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1136119905164164991}
   m_Layer: 0
   m_Name: Enlatado
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &8686984806730997108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1001 &4838237908439443922
 PrefabInstance:
   m_ObjectHideFlags: 0

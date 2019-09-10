@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: -5047665446180923980}
   m_Layer: 0
   m_Name: Maca
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &-7231620693123151853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,6 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1001 &2744069821527656388
 PrefabInstance:
   m_ObjectHideFlags: 0

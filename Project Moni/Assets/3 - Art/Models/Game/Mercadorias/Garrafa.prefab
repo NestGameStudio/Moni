@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: -2306063191656708225}
   m_Layer: 0
   m_Name: Garrafa
-  m_TagString: Untagged
+  m_TagString: Mercadoria
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7b27ddd6ced41118089b65c196c5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dragging: 0
 --- !u!114 &-1660763857192420771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
+  IncreaseSizePercentage: 25
 --- !u!1 &6724913169941745636
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +336,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7994511850653421387}
     m_Modifications:
+    - target: {fileID: 4509123628578365538, guid: 20cf9ca2720486140ad41cd5946c8420,
+        type: 3}
+      propertyPath: m_Name
+      value: Garrafa
+      objectReference: {fileID: 0}
     - target: {fileID: 633030437348643441, guid: 20cf9ca2720486140ad41cd5946c8420,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -403,11 +410,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509123628578365538, guid: 20cf9ca2720486140ad41cd5946c8420,
-        type: 3}
-      propertyPath: m_Name
-      value: Garrafa
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20cf9ca2720486140ad41cd5946c8420, type: 3}
