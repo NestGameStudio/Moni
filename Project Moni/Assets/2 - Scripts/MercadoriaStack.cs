@@ -39,6 +39,11 @@ public class MercadoriaStack : MonoBehaviour
             Destroy(merch);
         }
 
+        if (this.gameObject.GetComponent<Mercadoria>().StackSize == MaxStackSize) {
+            // chama a função que causa pontuação
+            Destroy(this.gameObject);
+        }
+
     }
 
     private void ChangeCombinationText()

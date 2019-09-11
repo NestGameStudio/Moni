@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxStackSize: 6
-  IncreaseSizePercentage: 25
+  IncreaseSizePercentage: 10
 --- !u!114 &9123279653214360935
 MonoBehaviour:
   m_ObjectHideFlags: 0
