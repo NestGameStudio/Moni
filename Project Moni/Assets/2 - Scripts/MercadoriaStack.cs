@@ -40,7 +40,10 @@ public class MercadoriaStack : MonoBehaviour
         }
 
         if (this.gameObject.GetComponent<Mercadoria>().StackSize == MaxStackSize) {
-            // chama a função que causa pontuação
+
+            // Add points
+
+            // remove the object from the cart
             Destroy(this.gameObject);
         }
 
