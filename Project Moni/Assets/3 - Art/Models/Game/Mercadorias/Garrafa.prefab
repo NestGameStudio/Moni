@@ -425,8 +425,8 @@ GameObject:
   - component: {fileID: 7618709724027612093}
   - component: {fileID: 1720737445725149241}
   - component: {fileID: 2443949202134408046}
-  - component: {fileID: -1660763857192420771}
   - component: {fileID: -2306063191656708225}
+  - component: {fileID: 6054977374917006128}
   m_Layer: 0
   m_Name: Garrafa
   m_TagString: Mercadoria
@@ -526,19 +526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dragging: 0
---- !u!114 &-1660763857192420771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3101007489251823299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mercadoria: {fileID: 11400000, guid: 0ab95a86d6a3827458ae839152c8a6d2, type: 2}
 --- !u!114 &-2306063191656708225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +540,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxStackSize: 6
   IncreaseSizePercentage: 25
+--- !u!114 &6054977374917006128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101007489251823299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05713a5460b03924e918c1f227c4b263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MercadoriaStats: {fileID: 11400000, guid: 0ab95a86d6a3827458ae839152c8a6d2, type: 2}
+  StackSize: 1
 --- !u!1 &6724913169941745636
 GameObject:
   m_ObjectHideFlags: 0

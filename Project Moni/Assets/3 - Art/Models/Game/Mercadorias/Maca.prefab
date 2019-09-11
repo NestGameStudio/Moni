@@ -378,8 +378,8 @@ GameObject:
   - component: {fileID: 2519614050650880449}
   - component: {fileID: 1530847371612527214}
   - component: {fileID: 929265147454502255}
-  - component: {fileID: -7231620693123151853}
   - component: {fileID: -5047665446180923980}
+  - component: {fileID: 6368120196847756183}
   m_Layer: 0
   m_Name: Maca
   m_TagString: Mercadoria
@@ -453,19 +453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dragging: 0
---- !u!114 &-7231620693123151853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2880620558448733181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07e425020da5aed4fb7b98f117fb8c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mercadoria: {fileID: 11400000, guid: b544680413f57744e828492453e0d1e7, type: 2}
 --- !u!114 &-5047665446180923980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +467,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxStackSize: 6
   IncreaseSizePercentage: 25
+--- !u!114 &6368120196847756183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880620558448733181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05713a5460b03924e918c1f227c4b263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MercadoriaStats: {fileID: 11400000, guid: b544680413f57744e828492453e0d1e7, type: 2}
+  StackSize: 1
 --- !u!1001 &2744069821527656388
 PrefabInstance:
   m_ObjectHideFlags: 0

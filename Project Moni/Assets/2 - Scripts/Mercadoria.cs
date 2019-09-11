@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Nova Mercadoria", menuName = "Mercadoria")]
-public class Mercadoria : ScriptableObject {
+public class Mercadoria : MonoBehaviour {
 
-    public GameObject MercadoriaPrefab;
-    public int Value;
+    // dar um jeito dos itens nao subirem de velocidade sem drama
 
-    public int StackSize = 1;
-
+    public MercadoriaStats MercadoriaStats;
+    [HideInInspector] public int StackSize = 1;
 }

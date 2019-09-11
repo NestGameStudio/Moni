@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     public GameObject MercParent;
 
     // Referencia a uma lista de Mercadoria que por sua vez está referenciando o Prefab do modelo
-    public List<Mercadoria> Mercadorias = new List<Mercadoria>();
+    public List<MercadoriaStats> Mercadorias = new List<MercadoriaStats>();
 
     [Header("Spawn Location")]
 
