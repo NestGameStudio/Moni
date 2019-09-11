@@ -36,8 +36,11 @@ public class Spawner : MonoBehaviour
     [Tooltip("menor intervalo possivel no qual o objeto pode fazer respawn")]
     public float MinLimitSpawnFrequency = 1f;
 
+    [HideInInspector] public bool LoseGame = false;
+
     // Start is called before the first frame update
     void Start() {
+
         StartCoroutine(SpawnerThread());
     }
 
@@ -91,7 +94,7 @@ public class Spawner : MonoBehaviour
     // It's not a thread (yet)
     IEnumerator SpawnerThread() {
 
-        while (true) {
+        while (!LoseGame) {
 
             float SpawnTime = InitialSpawnFrequency - SpawnMultiplierOverTime * Time.deltaTime;
             if (SpawnTime < MinLimitSpawnFrequency) {

@@ -8,6 +8,8 @@ public class EndGameManager : MonoBehaviour
 
     public void EndGame()
     {
+        this.GetComponentInParent<Spawner>().LoseGame = true;
+
         _gameOverPopup.SetActive(true);
         Time.timeScale = 0;
     }
