@@ -11,8 +11,18 @@ public class MercadoriaStack : MonoBehaviour
 
     private Vector3 IncreaseSize;
 
+    private TMPro.TMP_Text counterText;
+
     private void Awake() {
         IncreaseSize = this.transform.localScale * (IncreaseSizePercentage/100);
+
+        // Get the counter text from the gameobject
+        foreach (Transform child in this.transform.GetComponentInChildren<Transform>(true)) {
+
+            if (child.name == "Combination Counter") {
+                counterText = child.GetChild(0).GetComponent<TMPro.TMP_Text>();
+            }
+        }
 
     }
 
@@ -24,7 +34,8 @@ public class MercadoriaStack : MonoBehaviour
 
         if ((StackSize < MaxStackSize) && (StackSizeCollider < MaxStackSize)) {
             this.gameObject.GetComponent<Mercadoria>().StackSize++;
-            this.transform.localScale += IncreaseSize;
+			ChangeCombinationText();
+			this.transform.localScale += IncreaseSize;
             Destroy(merch);
         }
 
@@ -32,9 +43,18 @@ public class MercadoriaStack : MonoBehaviour
 
     private void ChangeCombinationText()
     {
-        int number = this.gameObject.GetComponent<Mercadoria>().StackSize++;
+        int number = this.gameObject.GetComponent<Mercadoria>().StackSize;
 
-        this.transform.Find("Combination Counter").GetChild(0).GetComponent<TMPro.TMP_Text>().text = number.ToString();
+        // Activate the counter child
+        if (number > 1 && !counterText.transform.parent.gameObject.activeSelf) {
+            counterText.transform.parent.gameObject.SetActive(true);
+        }
+
+        // change the text
+        if (counterText) {
+            counterText.text = number.ToString();
+        }
+
     }
 
     // Check the collision
