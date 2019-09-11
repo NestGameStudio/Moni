@@ -6,6 +6,10 @@ public class EndGameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _gameOverPopup;
 
+    private void Start()
+    {
+        Time.timeScale = 1;        
+    }
     public void EndGame()
     {
         _gameOverPopup.SetActive(true);
