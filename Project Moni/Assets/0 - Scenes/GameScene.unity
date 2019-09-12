@@ -1073,6 +1073,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1897148331971393904, guid: eec5e2e99236f2f429d972733006738c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7783985916924813252, guid: eec5e2e99236f2f429d972733006738c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,11 +1181,6 @@ PrefabInstance:
     - target: {fileID: 7783985916924813252, guid: eec5e2e99236f2f429d972733006738c,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897148331971393904, guid: eec5e2e99236f2f429d972733006738c,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2413418615177952908, guid: eec5e2e99236f2f429d972733006738c,
@@ -1392,11 +1392,6 @@ PrefabInstance:
       propertyPath: MercParent
       value: 
       objectReference: {fileID: 216805774}
-    - target: {fileID: 8397991752535684352, guid: d79ee71fa0982634bb4957b375f2e80b,
-        type: 3}
-      propertyPath: MaxErrorCounter
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3059054602579851248, guid: d79ee71fa0982634bb4957b375f2e80b,
         type: 3}
       propertyPath: _gameOverPopup

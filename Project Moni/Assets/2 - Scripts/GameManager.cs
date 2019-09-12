@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private int ErrorCounter;
     [SerializeField] private int MaxErrorCounter;
     [SerializeField] private EndGameManager EndGManager;
+
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
@@ -16,6 +17,12 @@ public class GameManager : MonoBehaviour
             EndGManager.EndGame();
         }
     }
+
+    public void AddPointsToScore(int points)
+    {
+        this.transform.Find("Score").GetComponent<Score>().AddScore(points);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
