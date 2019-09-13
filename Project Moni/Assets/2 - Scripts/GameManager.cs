@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private int ErrorCounter;
     [SerializeField] private int MaxErrorCounter;
     [SerializeField] private EndGameManager EndGManager;
+    [SerializeField] private Score score;
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
@@ -16,6 +17,21 @@ public class GameManager : MonoBehaviour
             EndGManager.EndGame();
         }
     }
+
+    [SerializeField] private float stackCompleteBonus;
+    public void AddScoreBasedOnStackSize(int stackSize, int maxStackSize, int merchValue)
+    {
+        int scoreToGive = merchValue * stackSize;
+
+        if (stackSize >= maxStackSize)
+        {
+            scoreToGive = scoreToGive * (int)stackCompleteBonus;
+        }
+
+        score.AddScore(scoreToGive);
+        score.UpdateScoreDisplay();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
