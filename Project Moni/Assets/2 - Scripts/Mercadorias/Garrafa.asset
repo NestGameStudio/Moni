@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05713a5460b03924e918c1f227c4b263, type: 3}
+  m_Script: {fileID: 11500000, guid: b8920266361d8f840924441bdc0abc8a, type: 3}
   m_Name: Garrafa
   m_EditorClassIdentifier: 
   MercadoriaPrefab: {fileID: 3101007489251823299, guid: 54d7c71a095419d4f9406945348e4f53,
     type: 3}
-  Value: 70
+  Value: 50

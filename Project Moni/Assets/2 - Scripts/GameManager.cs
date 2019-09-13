@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int MaxErrorCounter;
     [SerializeField] private EndGameManager EndGManager;
     [SerializeField] private Score score;
+
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // Façades for score >>>>
     [SerializeField] private float stackCompleteBonus;
     public void AddScoreBasedOnStackSize(int stackSize, int maxStackSize, int merchValue)
     {
@@ -32,15 +34,10 @@ public class GameManager : MonoBehaviour
         score.UpdateScoreDisplay();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    
+    public void AddPointsToScore(int points)
     {
-        
+        this.transform.Find("Score").GetComponent<Score>().AddScore(points);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // <<<<<
 }
