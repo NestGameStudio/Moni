@@ -6,13 +6,21 @@ public class MercadoriaStack : MonoBehaviour
 {
     // What they do when two objects of the same kind collide
 
+    // ============ Attributes ============
+    // External references
+    private TMPro.TMP_Text counterText;
+    [HideInInspector] public GameManager gm;
+    [SerializeField] private Mercadoria mercadoriaScript;
+
+    // Internal variables
+    private Vector3 IncreaseSize;
+
+    // External variables (GD Tools)
     public int MaxStackSize = 6;
     [Range(1,100)] public float IncreaseSizePercentage = 25;
 
-    private Vector3 IncreaseSize;
 
-    private TMPro.TMP_Text counterText;
-
+    // =========== Methods ===========
     private void Awake() {
         IncreaseSize = this.transform.localScale * (IncreaseSizePercentage/100);
 
@@ -24,24 +32,25 @@ public class MercadoriaStack : MonoBehaviour
             }
         }
 
+        mercadoriaScript = this.GetComponent<Mercadoria>();
     }
 
     // Do the combination
     public void CombinateItens(GameObject merch) {
 
-        int StackSize = this.gameObject.GetComponent<Mercadoria>().StackSize;
         int StackSizeCollider = merch.GetComponent<Mercadoria>().StackSize;
 
-        if ((StackSize < MaxStackSize) && (StackSizeCollider < MaxStackSize)) {
-            this.gameObject.GetComponent<Mercadoria>().StackSize++;
-			ChangeCombinationText();
+        if ((mercadoriaScript.StackSize < MaxStackSize) && (StackSizeCollider < MaxStackSize)) {
+
+            mercadoriaScript.StackSize += StackSizeCollider;
+			ChangeCombinationText(mercadoriaScript.StackSize);
 			this.transform.localScale += IncreaseSize;
             Destroy(merch);
         }
 
-        if (this.gameObject.GetComponent<Mercadoria>().StackSize == MaxStackSize) {
+        if (mercadoriaScript.StackSize == MaxStackSize) {
 
-            // Add points
+            gm.AddScoreBasedOnStackSize(mercadoriaScript.StackSize, MaxStackSize, mercadoriaScript.MercadoriaStats.Value);
 
             // remove the object from the cart
             Destroy(this.gameObject);
@@ -49,18 +58,18 @@ public class MercadoriaStack : MonoBehaviour
 
     }
 
-    private void ChangeCombinationText()
+    private void ChangeCombinationText(int stackSize)
     {
-        int number = this.gameObject.GetComponent<Mercadoria>().StackSize;
+        //int number = this.gameObject.GetComponent<Mercadoria>().StackSize;
 
         // Activate the counter child
-        if (number > 1 && !counterText.transform.parent.gameObject.activeSelf) {
+        if (stackSize > 1 && !counterText.transform.parent.gameObject.activeSelf) {
             counterText.transform.parent.gameObject.SetActive(true);
         }
 
         // change the text
         if (counterText) {
-            counterText.text = number.ToString();
+            counterText.text = stackSize.ToString();
         }
 
     }
@@ -75,7 +84,7 @@ public class MercadoriaStack : MonoBehaviour
             if (this.gameObject.GetComponent<Mercadoria>().StackSize >= collision.gameObject.GetComponent<Mercadoria>().StackSize)
             {
                 // if this object is being dragged ignore this function (bug fix from both itens disappearing when they collide)
-                // if a object collide with eachother and they are not being dragged make the object combine with the lowerst one
+                // if an object collides with another and they are not being dragged make the object combine with the lowest one
                 if ((!this.gameObject.GetComponent<DragAndDrop>().Dragging && collision.gameObject.GetComponent<DragAndDrop>().Dragging) ||
                     ((!this.gameObject.GetComponent<DragAndDrop>().Dragging && !collision.gameObject.GetComponent<DragAndDrop>().Dragging) &&
                     (this.transform.position.y < collision.transform.position.y)))

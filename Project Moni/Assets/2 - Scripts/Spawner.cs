@@ -67,6 +67,8 @@ public class Spawner : MonoBehaviour
         else
             merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, randomMerch.transform);
 
+        merc.GetComponent<MercadoriaStack>().gm = transform.GetComponent<GameManager>();
+
         ThrowMercInCart(merc);
 
     }
