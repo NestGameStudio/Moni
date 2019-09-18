@@ -24,20 +24,15 @@ public class GameManager : MonoBehaviour
     public void AddScoreBasedOnStackSize(int stackSize, int maxStackSize, int merchValue)
     {
         int scoreToGive = merchValue * stackSize;
+        float scoreToGiveFloat = (float) scoreToGive;
 
         if (stackSize >= maxStackSize)
         {
-            scoreToGive = scoreToGive * (int)stackCompleteBonus;
+            scoreToGiveFloat = scoreToGiveFloat * stackCompleteBonus;
         }
 
-        score.AddScore(scoreToGive);
+        score.AddScore((int)scoreToGiveFloat);
         score.UpdateScoreDisplay();
-    }
-
-    
-    public void AddPointsToScore(int points)
-    {
-        this.transform.Find("Score").GetComponent<Score>().AddScore(points);
     }
     // <<<<<
 }
