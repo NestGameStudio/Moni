@@ -1,12 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Score : MonoBehaviour
 {
     private int score;
-    [SerializeField] private Text textDisplay;
+    [SerializeField] private TextMeshProUGUI textDisplay;
+
+    private void Start()
+    {
+        UpdateScoreDisplay();
+    }
 
     public void AddScore(int scoreChange) => score += scoreChange;
 
