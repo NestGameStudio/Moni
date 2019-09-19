@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b72351ea444ee45b7ea96ef3b1ad05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxErrorCounter: 3
   EndGManager: {fileID: 3059054602579851248}
   score: {fileID: 5317306367880476502}
+  MaxErrorCounter: 3
   stackCompleteBonus: 1.5
 --- !u!114 &6674480185564703609
 MonoBehaviour:
@@ -165,3 +165,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameOverPopup: {fileID: 0}
+  merchandiseListRef: {fileID: 0}
+  gm: {fileID: 8397991752535684352}

@@ -5,16 +5,24 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private int ErrorCounter;
-    [SerializeField] private int MaxErrorCounter;
+    // External references
     [SerializeField] private EndGameManager EndGManager;
     [SerializeField] private Score score;
 
+    // Internal variables
+    private int ErrorCounter;
+
+    // External variables (GD tools)
+    [SerializeField] private int MaxErrorCounter;
+
+    private bool isEndingGame = false;
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
-        if(ErrorCounter >= MaxErrorCounter)
+        if(ErrorCounter >= MaxErrorCounter && isEndingGame == false)
         {
+            isEndingGame = true;
+            GetComponent<Spawner>().StopSpawning();
             EndGManager.EndGame();
         }
     }

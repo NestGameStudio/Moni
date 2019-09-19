@@ -36,9 +36,10 @@ public class Spawner : MonoBehaviour
     [Tooltip("menor intervalo possivel no qual o objeto pode fazer respawn")]
     public float MinLimitSpawnFrequency = 1f;
 
+    Coroutine spawnerCoroutine;
     // Start is called before the first frame update
     void Start() {
-        StartCoroutine(SpawnerThread());
+        spawnerCoroutine = StartCoroutine(SpawnerThread());
     }
 
     // Spawn the merchandise in the scene
@@ -104,6 +105,11 @@ public class Spawner : MonoBehaviour
 
             SpawnMerch();
         }
+    }
+
+    public void StopSpawning()
+    {
+        StopCoroutine(spawnerCoroutine);
     }
 
 }
