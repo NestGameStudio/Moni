@@ -539,6 +539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver popup
       objectReference: {fileID: 0}
+    - target: {fileID: 6432679584690265928, guid: f68f925196a6b374ea9d6a4a3cdd76ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 477085773095214299, guid: f68f925196a6b374ea9d6a4a3cdd76ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -643,6 +648,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057565037025031185, guid: f68f925196a6b374ea9d6a4a3cdd76ec,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -207
+      objectReference: {fileID: 0}
+    - target: {fileID: 32517320187827515, guid: f68f925196a6b374ea9d6a4a3cdd76ec,
+        type: 3}
+      propertyPath: m_Name
+      value: Game Over!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064674081132863367, guid: f68f925196a6b374ea9d6a4a3cdd76ec,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f68f925196a6b374ea9d6a4a3cdd76ec, type: 3}

@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndGameManager : MonoBehaviour
 {
     [SerializeField] private GameObject _gameOverPopup;
     [SerializeField] private Transform merchandisesInGameRef;
     [SerializeField] private GameManager gm;
+    [SerializeField] private GameObject points;
+    [SerializeField] private TextMeshProUGUI finalScore;
 
     private List<GameObject> merchandiseList;
 
@@ -41,5 +44,7 @@ public class EndGameManager : MonoBehaviour
     private void ShowEndGamePopup()
     {
         _gameOverPopup.SetActive(true);
+        finalScore.text = points.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text;
+        points.SetActive(false);
     }
 }
