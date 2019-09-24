@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     public GameObject MercParent;
 
     // Referencia a uma lista de Mercadoria que por sua vez está referenciando o Prefab do modelo
-    public List<Mercadoria> Mercadorias = new List<Mercadoria>();
+    public List<MercadoriaStats> Mercadorias = new List<MercadoriaStats>();
 
     [Header("Spawn Location")]
 
@@ -36,10 +36,10 @@ public class Spawner : MonoBehaviour
     [Tooltip("menor intervalo possivel no qual o objeto pode fazer respawn")]
     public float MinLimitSpawnFrequency = 1f;
 
+    Coroutine spawnerCoroutine;
     // Start is called before the first frame update
     void Start() {
-
-        StartCoroutine(SpawnerThread());
+        spawnerCoroutine = StartCoroutine(SpawnerThread());
     }
 
     // Spawn the merchandise in the scene
@@ -67,6 +67,8 @@ public class Spawner : MonoBehaviour
             merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, MercParent.transform);
         else
             merc = Instantiate(randomMerch, initialPosition, randomMerch.transform.rotation, randomMerch.transform);
+
+        merc.GetComponent<MercadoriaStack>().gm = transform.GetComponent<GameManager>();
 
         ThrowMercInCart(merc);
 
@@ -103,6 +105,11 @@ public class Spawner : MonoBehaviour
 
             SpawnMerch();
         }
+    }
+
+    public void StopSpawning()
+    {
+        StopCoroutine(spawnerCoroutine);
     }
 
 }
