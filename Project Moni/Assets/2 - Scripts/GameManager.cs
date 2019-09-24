@@ -5,26 +5,42 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private int ErrorCounter;
-    [SerializeField] private int MaxErrorCounter;
+    // External references
     [SerializeField] private EndGameManager EndGManager;
+    [SerializeField] private Score score;
+
+    // Internal variables
+    private int ErrorCounter;
+
+    // External variables (GD tools)
+    [SerializeField] private int MaxErrorCounter;
+
+    private bool isEndingGame = false;
     public void IncreaseErrorCounter()
     {
         ErrorCounter++;
-        if(ErrorCounter >= MaxErrorCounter)
+        if(ErrorCounter >= MaxErrorCounter && isEndingGame == false)
         {
+            isEndingGame = true;
+            GetComponent<Spawner>().StopSpawning();
             EndGManager.EndGame();
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    // Façades for score >>>>
+    [SerializeField] private float stackCompleteBonus;
+    public void AddScoreBasedOnStackSize(int stackSize, int maxStackSize, int merchValue)
     {
-        
+        int scoreToGive = merchValue * stackSize;
+        float scoreToGiveFloat = (float) scoreToGive;
+
+        if (stackSize >= maxStackSize)
+        {
+            scoreToGiveFloat = scoreToGiveFloat * stackCompleteBonus;
+        }
+
+        score.AddScore((int)scoreToGiveFloat);
+        score.UpdateScoreDisplay();
     }
+    // <<<<<
 }
