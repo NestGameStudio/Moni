@@ -2337,7 +2337,7 @@ PrefabInstance:
     - target: {fileID: 8397991752535684352, guid: d79ee71fa0982634bb4957b375f2e80b,
         type: 3}
       propertyPath: MaxErrorCounter
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8397991752535684353, guid: d79ee71fa0982634bb4957b375f2e80b,
         type: 3}
@@ -2399,6 +2399,26 @@ PrefabInstance:
       propertyPath: MercParent
       value: 
       objectReference: {fileID: 216805774}
+    - target: {fileID: 6674480185564703609, guid: d79ee71fa0982634bb4957b375f2e80b,
+        type: 3}
+      propertyPath: InitialSpawnFrequency
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674480185564703609, guid: d79ee71fa0982634bb4957b375f2e80b,
+        type: 3}
+      propertyPath: SpawnMultiplierOverTime
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674480185564703609, guid: d79ee71fa0982634bb4957b375f2e80b,
+        type: 3}
+      propertyPath: MinY
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674480185564703609, guid: d79ee71fa0982634bb4957b375f2e80b,
+        type: 3}
+      propertyPath: MaxY
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3059054602579851248, guid: d79ee71fa0982634bb4957b375f2e80b,
         type: 3}
       propertyPath: _gameOverPopup
