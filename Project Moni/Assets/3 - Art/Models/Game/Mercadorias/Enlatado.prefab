@@ -443,9 +443,9 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.1
-  m_AngularDrag: 0.01
+  m_AngularDrag: 0.1
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7467ba295051a93478ee816967e45aac, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -475,6 +475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  mercadoriaScript: {fileID: 0}
   MaxStackSize: 6
   IncreaseSizePercentage: 10
 --- !u!114 &813694997313254119
@@ -498,6 +500,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5054031943464009451}
     m_Modifications:
+    - target: {fileID: 5009046150863806826, guid: 2016fde1400fe364ca4ea58ed531ce07,
+        type: 3}
+      propertyPath: m_Name
+      value: Leite Condensado
+      objectReference: {fileID: 0}
     - target: {fileID: 8347682732130734969, guid: 2016fde1400fe364ca4ea58ed531ce07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -567,11 +574,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4.9477644
-      objectReference: {fileID: 0}
-    - target: {fileID: 5009046150863806826, guid: 2016fde1400fe364ca4ea58ed531ce07,
-        type: 3}
-      propertyPath: m_Name
-      value: Leite Condensado
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2016fde1400fe364ca4ea58ed531ce07, type: 3}

@@ -433,9 +433,9 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.1
-  m_AngularDrag: 0.01
+  m_AngularDrag: 0.1
   m_GravityScale: 2
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 7467ba295051a93478ee816967e45aac, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -465,6 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6a9de5ad861e4ab95a6f48ac716ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gm: {fileID: 0}
+  mercadoriaScript: {fileID: 0}
   MaxStackSize: 6
   IncreaseSizePercentage: 10
 --- !u!114 &6368120196847756183
