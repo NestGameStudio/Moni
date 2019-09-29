@@ -34,9 +34,10 @@ public class DragAndDrop : MonoBehaviour
             Vector3 rayPoint = ray.GetPoint(distance);
 
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
-            rb.freezeRotation = true;
-            rb.Sleep();
-            rb.MovePosition(rayPoint);
+            //rb.freezeRotation = true;
+            //rb.Sleep();
+            //rb.MovePosition(rayPoint);
+            transform.position = rayPoint;
 
         } else {
 
