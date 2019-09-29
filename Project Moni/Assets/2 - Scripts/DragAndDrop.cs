@@ -35,9 +35,10 @@ public class DragAndDrop : MonoBehaviour
 
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
             //rb.freezeRotation = true;
-            //rb.Sleep();
+            rb.Sleep();
             //rb.MovePosition(rayPoint);
-            transform.position = rayPoint;
+            rb.position = rayPoint;
+            //transform.position = rayPoint;
 
         } else {
 
